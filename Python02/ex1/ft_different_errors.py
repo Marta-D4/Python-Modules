@@ -38,3 +38,5 @@ def test_error_types():
     print("=== Garden Error Types Demo ===")
     garden_operations()
     print("\nAll error types tested successfully!")
+
+test_error_types()
