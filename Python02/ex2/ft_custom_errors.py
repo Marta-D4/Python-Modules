@@ -53,27 +53,27 @@ def test_custom_errors():
     # Specific error: PlantError
     try:
         check_plant()
-    except PlantError as e:
-        print("Caught PlantError:", e, "\n")
+    except PlantError as error:
+        print("Caught PlantError:", error, "\n")
 
     # Specific error: WaterError
     try:
         check_water()
-    except WaterError as e:
-        print("Caught WaterError:", e)
+    except WaterError as error:
+        print("Caught WaterError:", error)
 
     # Catch all garden errors
     print("\nTesting catching all garden errors...")
 
     try:
         raise_plant_error()
-    except GardenError as e:
-        print("Caught a garden error:", e)
+    except GardenError as error:
+        print("Caught a garden error:", error)
 
     try:
         raise_water_error()
-    except GardenError as e:
-        print("Caught a garden error:", e, "\n")
+    except GardenError as error:
+        print("Caught a garden error:", error, "\n")
 
     print("All custom error types work correctly!")
 
