@@ -3,14 +3,17 @@
 import math
 
 def calc_distance(p1, p2):
+    """Calculates the Euclidean distance between two points in a 3D space"""
     x1, y1, z1 = p1
     x2, y2, z2 = p2
     distance = math.sqrt((x2-x1) ** 2 + (y2-y1) ** 2 + (z2-z1) ** 2)
     return f"{distance:.2f}"
 
 def parse_coords(position: str):
+    """Parses a string of comma-separated coordinates into a tuple of ints"""
     coords = []
 
+    # Splits the string by commas, catch ValueError if it cannot be converted to ints.
     try:
         for num in position.split(','):
             coords.append(int(num))
@@ -19,12 +22,17 @@ def parse_coords(position: str):
         print(f"Error details - Type: ValueError, Args: {error.args}")
         return
     
+    # Checks if the number of coordinates is 3
     if len(coords) != 3:
         print("Number of coordinates expected 3")
         return
     
     return tuple(coords)
 
+
+# =========================
+# Main program execution
+# =========================
 
 print("=== Game Coordinate System ===")
 
