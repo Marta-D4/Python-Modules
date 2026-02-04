@@ -4,7 +4,7 @@
     Allows players to analyze and compare their achievements through sets (unordered collection 
     of unique elements).
     Set operations such as 'union()'"|", 'intersection()'"&", and 'difference()'"-"
-    will be used to efficiently perform comparisons and analysis.
+    will be used.
 """
 
 alice = set(("first_kill", "level_10", "treasure_hunter", "speed_demon"))
